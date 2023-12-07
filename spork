@@ -1,0 +1,14 @@
+  self.text = textBuilder()
+        self.width = width
+        self.textColor = textColor
+        self.strokeColor = strokeColor
+        self.quality = quality
+    }
+    
+    var body: some View {
+        ZStack {
+            ForEach(Array(stride(from: 0,
+                                 through: .pi * 2,
+                                 by: .pi / quality.rawValue)),
+                    id: \.self) { angle in
+                text
